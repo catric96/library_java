@@ -2,9 +2,6 @@ import java.io.*;
 /**
  *  Defines some basic methods a libary of books should
  *  define.
- *  
- *  @author Raven Russell
- *  @version 0.1
  */
 interface Library {
  /**
