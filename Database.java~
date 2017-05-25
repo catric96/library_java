@@ -1,0 +1,61 @@
+import java.io.*;
+
+public class Database implements Library{
+
+private String libName = "";
+
+  public boolean setLibraryFile(String libraryFileName){
+    libName = libraryFileName;
+    File libraryfile = new File(libraryFileName);
+    return libraryfile.exists();
+  }
+  
+  public File getLibraryFile(){
+    if(libName == null)
+      return null;    
+    File libFile = new File(libName);
+    return libFile;
+  }
+  
+  public String[] getLibraryBooks(boolean withPath){
+    File[] bookslist = getLibraryFile().listFiles();
+    String[] paths = new String[bookslist.length]; 
+    for(int x = 0; x < bookslist.length; x++){
+        String path = bookslist[x].getName();
+        if(withPath)
+          path = bookslist[x].getPath();
+        paths[x] = path;
+    }
+    return paths;
+  }
+  
+  public int getNumberOfBooks(){
+    return getLibraryBooks(false).length;
+  }
+  
+  public int getLibraryOccurrences(String phrase){
+    return 0;
+  }
+  
+  public double getLibraryNewlinePercentage(char[] newlineChars){
+    return 0.0;
+  }
+  
+  public int getBookOccurrences(int bookNumber, String phrase){
+    return 0;
+  }
+  
+  public int getBookNumLines(int bookNumber){
+    return 0;
+  }
+  
+  public char[] getBookNewlineCharacters(int bookNumber){
+    char[] a = new char[1];
+    return a;
+  }
+  
+  
+  
+  public static void main(String[] args){
+    
+}

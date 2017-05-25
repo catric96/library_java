@@ -1,0 +1,2 @@
+./text/fairytales.txt
+./text/fairytales2.txt
