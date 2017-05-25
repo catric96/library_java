@@ -2,6 +2,7 @@ import java.io.*;
 /**
  *  Defines some basic methods a libary of books should
  *  define.
+ *  Written by Raven Russel, user w/ Database
  */
 interface Library {
  /**
